@@ -1,0 +1,35 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: "https://github.com/alokyadav2020/Resource/raw/main/knkarthickdialogsum.zip"
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+ 
+
+data_validation:
+  root_dir: artifacts/data_validation
+  validation_status: artifacts/data_validation/status.txt
+  all_required_file: ["train","test","validation"]
+
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/dataset
+  tokenizer: google/flan-t5-small
+
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_path: artifacts/data_transformation/dataset
+  model_ckpt: google/flan-t5-small
+
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  data_path: artifacts/data_ingestion/dataset
+  model_path: artifacts/model_trainer/flan-t5-base-model
+  tokenizer_path: artifacts/model_trainer/tokenizer
+  metric_file_name: artifacts/model_evaluation/metrics.csv  
