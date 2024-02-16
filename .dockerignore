@@ -1,0 +1,14 @@
+artifacts
+Notebook
+env
+venv
+logs
+infrastructure
+docs
+src.egg-info
+LICENSE
+README.md
+notebooks
+scripts
+Data
+data

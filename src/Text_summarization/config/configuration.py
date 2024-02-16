@@ -28,6 +28,7 @@ class ConfigurationManager:
               local_data_file = config.local_data_file,
               unzip_dir= config.unzip_dir
          )
+         
 
          return data_ingestion_config
     
