@@ -10,5 +10,4 @@ setup(
     author_email='alokranjan.ucer@gmail.com',
     # install_requires=get_requirements('requirements.txt'),
     packages=find_packages()
-
 )
